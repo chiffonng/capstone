@@ -1,11 +1,11 @@
 # capstone
 
 ## What I learned to finish this Capstone
-1. Minitorch
-2. Stanford CS336 Language Modeling from Scratch
-3. Natural Language Processing Specialization
-4. nanoGPT - [StanfordNLP's notebook](https://github.com/mlberkeley/learn-llm/blob/main/minGPT_student.ipynb)
-5. CMU Advanced NLP
+1. Minitorch - [0](https://github.com/minitorch/minitorch-module-0-chiffonng) | [1](https://github.com/minitorch/minitorch-module-1-chiffonng)
+3. Stanford CS336 Language Modeling from Scratch
+4. [Natural Language Processing Specialization](https://github.com/chiffonng?tab=repositories)
+5. nanoGPT - [StanfordNLP's notebook](https://github.com/mlberkeley/learn-llm/blob/main/minGPT_student.ipynb)
+6. CMU Advanced NLP
 
 ## Dataset source
 Aim: 2-3 million data points
