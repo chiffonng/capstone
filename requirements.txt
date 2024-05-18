@@ -1,0 +1,4 @@
+mypy==1.10.0
+pandas>=2.0.0
+scrapy==2.11.2
+typing-extensions==4.11.0
