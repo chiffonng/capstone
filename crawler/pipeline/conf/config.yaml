@@ -1,0 +1,43 @@
+files:
+  main_corpus: initial_corpus.txt
+  seed_words: seed_words.txt
+  nutch_seed_url: seed.txt
+  domain: domains.txt
+  lid_model: lid_model.pkl
+  final_corpus: final_corpus.txt
+  stats_in_out_links: stats_inlinks_outlinks.txt
+  url_in_out_links: url_inlinks_outlinks.txt
+paths:
+  data: ${hydra:runtime.cwd}/pipeline/data
+  nutch: ${hydra:runtime.cwd}/nutch/urls
+  lid: ${hydra:runtime.cwd}/pipeline/lid
+  eval_sample: ${hydra:runtime.cwd}/pipeline/data/evaluation_sample
+params:
+  solr_api_url: "http://localhost:8983/solr/nutch/select"
+  solr_start: 0
+  solr_rows: 1
+  language: "tet"
+  lang_proba_threshold: 0.95
+  corpus_sample_ratio: 0.1
+  num_seed_word_sample: 3
+  google_search_num_result: 10
+  max_seed_url_length: 300
+  max_consecutive_newline: 2
+  extensions_to_exclude:
+  - \.(rtf)$
+  - \.pptx?$
+  - \.docx?$
+  - \.(txt)$
+  - \.(pdf)$
+  - \.mp3
+  - \.mp4
+  - \.avi
+  domains_to_exclude:
+  - youtube.com
+  - instagram.com
+  - facebook.com
+  - linkedin.com
+  # Sample configuration
+  total_samples: 6
+  total_text_pages: 50
+
