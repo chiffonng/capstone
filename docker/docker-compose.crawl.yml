@@ -1,0 +1,46 @@
+name: crawler
+version: "3.8"
+
+services:
+  nutch:
+    build:
+      context: .
+      dockerfile: docker/nutch.Dockerfile
+    container_name: nutch
+    ports:
+      - "8081:8081" # Nutch REST server port
+      - "8080:8080" # Nutch Web UI port
+    volumes:
+      - ./crawler/nutch:/workspace/crawler/nutch
+    environment:
+      - NUTCH_HOME=/workspace/crawler/nutch
+      - CRAWL=${CRAWL}
+
+  solr:
+    image: solr:latest # 9.6.1
+    container_name: solr
+    ports:
+      - "8983:8983"
+    environment:
+      - SOLR_CORE=nutch
+      - SOLR_HOME=/workspace/crawler/solr
+    volumes:
+      - ./crawler/solr:/workspace/crawler/solr
+    entrypoint:
+      - "docker-entrypoint.sh"
+      - "solr-precreate"
+      - "nutch"
+    depends_on:
+      - nutch
+# Named volumes
+volumes:
+  nutch:
+    driver: local
+  solr:
+    driver: local
+
+# External networks
+networks:
+  default:
+    external:
+      name: crawler
