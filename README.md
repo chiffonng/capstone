@@ -6,6 +6,12 @@ See [report](report.md) for my ongoing progress of written work.
 
 ## Installation
 
+To experiment with reproducibility, this project uses Docker to containerize the environment. To build the Docker image, run the following command:
+
+```bash
+docker
+```
+
 ## Dataset source
 
 Aim: 2-3 million data points. All original sources used for training are listed [here](https://docs.google.com/document/d/1acj0_pxlS0813XGfy02-WtfHdhHK_apYwhI8AH8Frck/edit)
@@ -28,3 +34,7 @@ Pipeline for crawling data will use [Apache Nutch](https://nutch.apache.org/) an
 3. CMU Advanced NLP - [Mini Llama](https://github.com/chiffonng/cmu-advanced-nlp-minllama-assignment) | [RAG system](https://github.com/chiffonng/knowledge-rag)
 4. Stanford CS336 Language Modeling from Scratch
 5. nanoGPT - [StanfordNLP's notebook](https://github.com/mlberkeley/learn-llm/blob/main/minGPT_student.ipynb)
+
+```
+
+```

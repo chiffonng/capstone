@@ -1,0 +1,6 @@
+/checkpoints/*
+/crawler/*
+/data/*
+/experiments/
+/logs/*
+/models/
